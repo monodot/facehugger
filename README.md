@@ -10,15 +10,15 @@ Named after the witty and whimsical character from Alien (1979).
 
 2.  Compile the JAR locally:
 
-    mvn clean install
+        mvn clean install
 
 3. Add to your application's POM:
 
-    <dependency>
-      <groupId>xyz.tomd.facehugger</groupId>
-      <artifactId>facehugger</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
+        <dependency>
+          <groupId>xyz.tomd.facehugger</groupId>
+          <artifactId>facehugger</artifactId>
+          <version>1.0-SNAPSHOT</version>
+        </dependency>
 
 4.  Start your application (`mvn spring-boot:run`), you should see the beans dumped to standard out.
 
