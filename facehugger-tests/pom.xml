@@ -4,23 +4,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>xyz.tomd.facehugger</groupId>
-    <artifactId>facehugger</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <parent>
+        <groupId>xyz.tomd.facehugger</groupId>
+        <artifactId>facehugger</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
 
-    <name>Facehugger :: Parent</name>
+    <artifactId>facehugger-tests</artifactId>
+    <name>Facehugger :: Tests</name>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        
-        <!-- Red Hat Fuse 7.4 on Spring Boot 2.x equivalent -->
-        <spring-boot.version>2.1.3.RELEASE</spring-boot.version>
-        <camel.version>2.23.2</camel.version>
+        <!-- Properties for Spring Boot 2.x -->
+        <!--<spring-boot.version>2.1.4.RELEASE</spring-boot.version>-->
+        <!--<camel.version>2.24.2</camel.version>-->
 
-        <!-- Red Hat Fuse 7.4 Spring Boot 1.x equivalent -->
-        <!--<spring.boot-version>1.5.19.RELEASE</spring.boot-version>-->
-        <!--<camel.version>2.21.0</camel.version>-->
+        <!-- Properties for Spring Boot 1.x -->
+        <spring-boot.version>1.5.10.RELEASE</spring-boot.version>
+        <camel.version>2.21.0</camel.version>
     </properties>
 
     <dependencyManagement>
@@ -44,9 +45,11 @@
         </dependencies>
     </dependencyManagement>
 
-    <modules>
-        <module>facehugger-core</module>
-        <module>facehugger-tests</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
